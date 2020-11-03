@@ -6,7 +6,7 @@
 #### [Jump to Manifest files](https://github.com/beerwithstraw/WhatsApp-Clone-Android/blob/master/WhatsApp/app/src/main/AndroidManifest.xml)
 #### [Jump to Firebase Notifications.js](https://github.com/beerwithstraw/WhatsApp-Clone-Android/blob/master/Notification/functions/index.js)
 
-# ![alt text](https://github.com/beerwithstraw/WhatsApp-Clone-Android/blob/master/snaps/chat01.png)
+# [alt text](https://github.com/beerwithstraw/WhatsApp-Clone-Android/blob/master/snaps/chat01.png)
 # ![alt text](https://github.com/beerwithstraw/WhatsApp-Clone-Android/blob/master/snaps/chat1.png)
 # ![alt text](https://github.com/beerwithstraw/WhatsApp-Clone-Android/blob/master/snaps/groups.png)
 # ![alt text](https://github.com/beerwithstraw/WhatsApp-Clone-Android/blob/master/snaps/overview.png)
