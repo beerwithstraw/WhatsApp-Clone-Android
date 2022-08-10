@@ -1,8 +1,6 @@
-package com.github.markpairdha.whatsapp;
+package com.app.whatsapp;
 
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,16 +10,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -99,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                     if(task.isSuccessful())
                     {
                         String currentUserId = mAuth.getCurrentUser().getUid();
-                        String deviceToken = FirebaseInstanceId.getInstance().getInstanceId().toString();
+                        String deviceToken = FirebaseMessaging.getInstance().getToken().toString();
                         UsersRef.child(currentUserId).child("device_Token").setValue(deviceToken).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {

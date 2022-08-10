@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background = "@drawable/profile_activity"
-    tools:context=".ProfileActivity">
+    tools:context="com.app.whatsapp.ProfileActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/visit_profile_image"

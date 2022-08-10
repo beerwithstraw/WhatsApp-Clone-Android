@@ -1,4 +1,4 @@
-package com.github.markpairdha.whatsapp;
+package com.app.whatsapp;
 
 import org.junit.Test;
 

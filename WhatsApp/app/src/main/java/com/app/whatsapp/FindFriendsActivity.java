@@ -1,4 +1,4 @@
-package com.github.markpairdha.whatsapp;
+package com.app.whatsapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.app.whatsapp.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -55,7 +56,7 @@ public class FindFriendsActivity extends AppCompatActivity {
                         .setQuery(UsersRef, Contacts.class)
                         .build();
         FirebaseRecyclerAdapter<Contacts, FindFriendViewHolder> adapter =
-                new FirebaseRecyclerAdapter<Contacts, FindFriendViewHolder>() {
+                new FirebaseRecyclerAdapter<Contacts, FindFriendViewHolder>(options) {
                     @Override
                     protected void onBindViewHolder(@NonNull FindFriendViewHolder holder, final int position, @NonNull Contacts model) {
 

@@ -1,4 +1,4 @@
-package com.github.markpairdha.whatsapp;
+package com.app.whatsapp;
 
 
 import android.os.Bundle;
@@ -25,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-
+import com.app.whatsapp.R;
 
 public class ContactsFragment extends Fragment
 {
@@ -49,7 +49,7 @@ public class ContactsFragment extends Fragment
         ContactsView = inflater.inflate(R.layout.fragment_contacts, container, false);
 
 
-        myContactsList = (RecyclerView) ContactsView.findViewById(R.id.contacts_list);
+        myContactsList = (RecyclerView) ContactsView.findViewById(R.id.contact_list);
         myContactsList.setLayoutManager(new LinearLayoutManager(getContext()));
 
 

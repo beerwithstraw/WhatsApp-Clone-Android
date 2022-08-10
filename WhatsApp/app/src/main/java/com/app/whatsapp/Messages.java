@@ -1,4 +1,4 @@
-package com.github.markpairdha.whatsapp;
+package com.app.whatsapp;
 
 public class Messages {
     private String from, message, type, to, messageID, time, date, name;

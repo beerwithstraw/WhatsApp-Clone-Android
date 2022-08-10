@@ -1,4 +1,4 @@
-package com.github.markpairdha.whatsapp;
+package com.app.whatsapp;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,6 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.app.whatsapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.tabs.TabLayout;

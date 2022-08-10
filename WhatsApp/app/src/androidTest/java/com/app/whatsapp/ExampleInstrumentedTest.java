@@ -1,4 +1,4 @@
-package com.github.markpairdha.whatsapp;
+package com.app.whatsapp;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;

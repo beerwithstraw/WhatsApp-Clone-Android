@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RequestsFragment">
-
+    tools:context="com.app.whatsapp.RequestsFragment">
+    
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chat_requests_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        ></androidx.recyclerview.widget.RecyclerView>
+        android:layout_alignParentTop="true" />
 
 </RelativeLayout>

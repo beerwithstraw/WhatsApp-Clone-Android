@@ -1,10 +1,11 @@
-package com.github.markpairdha.whatsapp;
+package com.app.whatsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.app.whatsapp.R;
 import com.squareup.picasso.Picasso;
 
 public class ImageViewerActivity extends AppCompatActivity

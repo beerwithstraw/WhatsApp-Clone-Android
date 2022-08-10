@@ -1,4 +1,4 @@
-package com.github.markpairdha.whatsapp;
+package com.app.whatsapp;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.app.whatsapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -49,7 +50,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         public MessageViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            senderMessageText = (TextView) itemView.findViewById(R.id.sender_messsage_text);
+            senderMessageText = (TextView) itemView.findViewById(R.id.sender_message_text);
             receiverMessageText = (TextView) itemView.findViewById(R.id.receiver_message_text);
             receiverProfileImage = (CircleImageView) itemView.findViewById(R.id.message_profile_image);
             messageReceiverPicture = itemView.findViewById(R.id.message_receiver_image_view);
@@ -73,7 +74,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
     @Override
     public void onBindViewHolder(@NonNull final MessageViewHolder messageViewHolder, final int position) {
         String messageSenderId = mAuth.getCurrentUser().getUid();
-        Messages messages = userMessagesList.get(i);
+        Messages messages = userMessagesList.get(position);
 
         String fromUserID = messages.getFrom();
         String fromMessageType = messages.getType();
@@ -108,14 +109,14 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
             if (fromUserID.equals(messageSenderId)) {
                 messageViewHolder.senderMessageText.setVisibility(View.VISIBLE);
 
-                messageViewHolder.senderMessageText.setBackgroundResource(R.drawable.sender_messages_layout);
+//                messageViewHolder.senderMessageText.setBackgroundResource(R.drawable.sender_messages_layout);
                 messageViewHolder.senderMessageText.setTextColor(Color.BLACK);
                 messageViewHolder.senderMessageText.setText(messages.getMessage() + "\n \n" + messages.getTime() + " - " + messages.getDate());
             } else {
                 messageViewHolder.receiverProfileImage.setVisibility(View.VISIBLE);
                 messageViewHolder.receiverMessageText.setVisibility(View.VISIBLE);
 
-                messageViewHolder.receiverMessageText.setBackgroundResource(R.drawable.receiver_messages_layout);
+//                messageViewHolder.receiverMessageText.setBackgroundResource(R.drawable.receiver_messages_layout);
                 messageViewHolder.receiverMessageText.setTextColor(Color.BLACK);
                 messageViewHolder.receiverMessageText.setText(messages.getMessage() + "\n \n" + messages.getTime() + " - " + messages.getDate());
             }
@@ -132,7 +133,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         } else if (fromMessageType.equals("pdf") || fromMessageType.equals("docx")) {
             if (fromUserID.equals(messageSenderId)) {
                 messageViewHolder.messageSenderPicture.setVisibility(View.VISIBLE);
-                messageViewHolder.messageSenderPicture.setBackground(R.drawable.file);
+//                messageViewHolder.messageSenderPicture.setBackground(R.drawable.file);
 
                 messageViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -144,7 +145,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
             } else {
                 messageViewHolder.receiverProfileImage.setVisibility(View.VISIBLE);
                 messageViewHolder.messageReceiverPicture.setVisibility(View.VISIBLE);
-                messageViewHolder.messageReceiverPicture.setBackground(R.drawable.file);
+//                messageViewHolder.messageReceiverPicture.setBackground(R.drawable.file);
             }
         }
         if (fromUserID.equals(messageSenderId)) {
